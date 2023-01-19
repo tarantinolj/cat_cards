@@ -1,5 +1,10 @@
 ## Прототип карточек
 
+<h1 align="center">Hi there, I'm <a href="https://vk.com/fnnpl" target="_blank">Andrew</a>
+<img src="https://github.com/blackcater/blackcater/raw/main/images/Hi.gif" height="32"/></h1>
+<h3 align="center"> In this repository, I will develop cat_cards </h3>
+<h3 align="center"> <a href="https://cat-cards.vercel.app//" target="_blank"> OR you can click that link to see in Vercel</a></h3>
+
 ### Задачи:
 
 **Браузеры**: Chrome, Firefox, Safari, IE11;<br>
