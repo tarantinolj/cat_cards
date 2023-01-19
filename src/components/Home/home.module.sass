@@ -1,0 +1,193 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css"
+    
+$base-font-family:     "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif
+$second-font-family:   "Exo 2", sans-serif
+$base-font-size:       16px
+
+$dark:            #000
+$dimmed:          #666
+$accent:          #1698d9
+$selected:        #d91667
+$disabled:        #b3b3b3
+
+    
+:root 
+  color: $dark
+  font-weight: 400
+  font-size: $base-font-size
+  font-family: $base-font-family
+  line-height: normal
+
+%transition 
+  transition: all 0.3s ease-in
+
+* 
+  box-sizing: border-box
+  &:after,
+  &:before 
+    box-sizing: border-box
+
+.wrapper
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    top: 0
+    left: 0
+    z-index: -1
+    max-width: auto
+    height: 100%
+    background: url("../../assets/Pattern.png") 0% 0% / 100% 100% repeat
+    -webkit-background-size: cover
+    -moz-background-size: cover
+    -o-background-size: cover
+    background-size: cover
+    h1
+        color: white
+        font-weight: 100
+        font-size: 36px
+        line-height: 42px
+        
+
+
+.container 
+    display: flex
+    justify-content: space-around
+    align-items: center
+    flex-wrap: wrap
+    .item_container 
+        position: relative
+        display: flex
+        flex-direction: column
+        padding: 20px
+        flex-wrap: wrap
+        .item 
+            position: inherit
+            $width: 320px
+            width: $width
+            height: 480px
+            cursor: pointer
+            display: flex
+            align-items: center
+            flex-direction: column
+            &:hover .item_angle::before,
+            &:hover::after,
+            &:hover::before 
+                border-color: $selected
+                z-index: 2
+            &:after,
+            &:before 
+                @extend %transition
+                position: absolute
+                content: ''
+                background-color: white
+                border-style: solid
+                border-width: 4px
+                border-color: $accent
+                z-index: 2
+            &:before 
+                width: $width - 48px
+                height: 48px
+                top: 0
+                right: 0
+                border-top-right-radius: 12px
+                border-left: none
+                border-bottom: none
+                z-index: 3
+            &:after 
+                width: $width
+                height: 425px
+                top: 48px
+                left: 0
+                border-bottom-left-radius: 12px
+                border-bottom-right-radius: 12px
+                border-top: none
+                z-index: 2
+            img
+                position: absolute
+                top: 197px
+                left: 4px
+                border-end-start-radius: 8px
+                z-index: 3
+            .about
+                padding-top: 25px
+                font-weight: 400
+                font-size: 16px
+                line-height: 18px
+                color: $dimmed
+                margin: 0 auto
+                z-index: 3
+            .name
+                font-weight: 700
+                font-size: 48px
+                line-height: 56px
+                color: $dark
+                z-index: 3
+            .additive
+                font-weight: 700
+                font-size: 24px
+                line-height: 28px
+                color: $dark
+                z-index: 3
+            .about_text
+                font-weight: 400
+                font-size: 14px
+                line-height: 16px
+                color: $dimmed
+                margin: 0 auto
+                margin-top:15px
+                z-index: 3
+                width: 180px
+                .portions
+                .bonus
+            .circle
+                position: absolute
+                top:380px
+                left: 225px
+                width: 80px
+                height: 80px
+                background: $accent
+                border-radius: 50%
+                display: flex
+                flex-direction: column
+                justify-content: center
+                align-items: center
+                z-index: 4
+                &:hover
+                    background: $selected
+                    z-index: 4
+                .number
+                    weight: 400
+                    font-size: 42px
+                    color: white
+                .weight
+                    weight: 400
+                    font-size: 21px
+                    color: white
+        .link
+            font-weight: 400
+            font-size: 13px
+            line-height: 15px
+            color: white
+            align-self: center
+            padding-top: 10px
+            z-index: 5
+            a
+                color: $accent    
+.item_angle 
+  &:before 
+    @extend %transition
+    position: absolute
+    content: ''
+    width: 60px
+    height: 48px
+    left: 24px
+    background-color: white
+    border-left-style: solid
+    border-left-width: 4px
+    border-color: $accent
+    transform: skewX(-45deg)
+    z-index: 1          
+
+
+    
